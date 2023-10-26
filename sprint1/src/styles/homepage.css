@@ -8,9 +8,9 @@ body {
     background-color: black;
 }
 
-h1 {
-    color: white;
-    text-align: center;
+.flex-banner {
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
@@ -20,4 +20,9 @@ h1 {
 .flex-figure {
     display: flex;
     justify-content: center;
+}
+
+footer {
+    background: linear-gradient(to top, #98C800 5%, transparent);
+    height: 100px;
 }
