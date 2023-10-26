@@ -10,8 +10,14 @@ body {
 
 h1 {
     color: white;
+    text-align: center;
 }
 
 .logo {
     width: 50vw;
+}
+
+.flex-figure {
+    display: flex;
+    justify-content: center;
 }
