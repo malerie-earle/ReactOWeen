@@ -1,10 +1,12 @@
-import './App.css';
-import HomePage from './components/HomePage'
+import "./App.css";
+import HomePage from "./components/HomePage";
+import SnakeGame from "./components/SnakeGame";
 
 function App() {
   return (
     <>
-    <HomePage></HomePage>
+      <HomePage></HomePage>
+      <SnakeGame></SnakeGame>
     </>
   );
 }

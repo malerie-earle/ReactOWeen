@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap");
+
+body {
+  background-image: url("./../images/halloween-background-with-scary-pumpkins-candles-graveyard-night-with-castle-background_123827-25820.avif");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  margin: 0;
+  height: 100vh;
+}
+
+.playArea {
+  border: 5px solid transparent;
+  width: 560px;
+  height: 400px;
+  position: fixed;
+  top: 59.1%;
+  left: 51.2%;
+  transform: translate(-50%, -50%);
+}
+
+#food {
+  display: none;
+}
+
+.monitor {
+  width: 850px;
+  height: 850px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.gameOver {
+  font-family: "pixelify Sans", sans-serif;
+  position: fixed;
+  top: 43.2%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+}
+
+.playButton {
+  font-family: "pixelify Sans", sans-serif;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(40, 61, 20);
+  color: rgb(0, 0, 0);
+  border: 3px solid #501080;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 25px;
+  box-shadow: 3px 3px 0px 0px #501080;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border 0.3s, color 0.3s;
+
+  &:hover {
+    border: 2px solid #7040a0;
+    background: black;
+    color: rgb(255, 102, 0);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 2px 2px #7040a0;
+  }
+}
+
+.scoreBox {
+  font-family: "pixelify Sans", sans-serif;
+  position: absolute;
+  top: 30px;
+  right: 300px;
+  max-width: 200px;
+  width: 30%;
+  -webkit-box-shadow: 0px 4px 13px 0px rgba(48, 26, 74, 0.63);
+  box-shadow: 20px 15px 13px 4px rgba(4, 0, 8, 0.63);
+  background-color: #da540783;
+  border-radius: 25px;
+}
+
+h2 {
+  font-size: 18px;
+  padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .playArea {
+    width: 90%;
+    height: 250px;
+  }
+}
+
+.scoreBox {
+  width: 100%;
+  margin: 5px;
+}
+
+.gameOver {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 16px;
+  padding: 5px;
+}
