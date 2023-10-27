@@ -154,21 +154,23 @@ function SnakeGame() {
   }
 
   return (
-    <div onKeyDown={(e) => changeDirection(e)}>
-      <img src={Monitor} alt="food" width="4000" className="monitor" />
-      <canvas
-        className="playArea"
-        ref={canvasRef}
-        width={`${canvasX}px`}
-        height={`${canvasY}px`}
-      />
-      {gameOver && <div className="gameOver">Game Over</div>}
-      <button onClick={play} className="playButton">
-        Play
-      </button>
-      <div className="scoreBox">
-        <h2>Score: {score}</h2>
-        <h2>High Score: {localStorage.getItem("snakeScore")}</h2>
+    <div className="snakeGame">
+      <div onKeyDown={(e) => changeDirection(e)}>
+        <img src={Monitor} alt="food" width="4000" className="monitor" />
+        <canvas
+          className="playArea"
+          ref={canvasRef}
+          width={`${canvasX}px`}
+          height={`${canvasY}px`}
+        />
+        {gameOver && <div className="gameOver">Game Over</div>}
+        <button onClick={play} className="playButton">
+          Play
+        </button>
+        <div className="scoreBox">
+          <h2>Score: {score}</h2>
+          <h2>High Score: {localStorage.getItem("snakeScore")}</h2>
+        </div>
       </div>
     </div>
   );

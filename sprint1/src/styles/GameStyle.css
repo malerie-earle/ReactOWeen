@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap");
 
-body {
-  background-image: url("./../images/halloween-background-with-scary-pumpkins-candles-graveyard-night-with-castle-background_123827-25820.avif");
+.snakeGame {
+  background-image: url(./../images/halloween-background-with-scary-pumpkins-candles-graveyard-night-with-castle-background_123827-25820.avif);
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <>
+    <div className="homePage">
       <div className="flex-banner">
         <img src={banner} alt="banner" />
       </div>
@@ -34,7 +34,7 @@ const HomePage = () => {
         </figure>
       </div>
       <footer></footer>
-    </>
+    </div>
   );
 };
 
