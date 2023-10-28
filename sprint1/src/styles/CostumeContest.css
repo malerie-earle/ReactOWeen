@@ -1,0 +1,15 @@
+
+.costumeContest {
+  background-color: #272829;
+  background-image: url("../images/v674-aew-55-halloween.jpg");
+  background-size:contain;
+  background-repeat:no-repeat;
+  box-sizing: border-box;
+  color: orange;
+  font-size: 60pt;
+  display: flex;
+  justify-content: center;
+  align-items: space-around;
+  text-align: center;
+}
+
