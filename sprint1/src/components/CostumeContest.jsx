@@ -1,5 +1,7 @@
 import "../styles/CostumeContest.css";
 import React, { useState } from "react";
+import "../styles/CostumeContest.css";
+import banner from "../images/sprint1/src/images/15.png";
 
 const imagePaths = [
   { name: "img1", path: require("../images/1.jpg") },
@@ -29,7 +31,6 @@ function CostumeContest() {
   const [costumes, setCostumes] = useState(costumeData);
 
   const handleVote = (costumeId) => {
-    // Find the costume by ID and update its votes
     const updatedCostumes = costumes.map((costume) => {
       if (costume.id === costumeId) {
         return { ...costume, votes: costume.votes + 1 };
@@ -43,9 +44,16 @@ function CostumeContest() {
 
   return (
     <div className="costumeContest">
-      <div>
+      <div className="banner">
+        <img
+          src={banner}
+          alt="Costume Contest"
+          style={{ width: "90%" }}
+        />
+      </div>
+      <div className="costume">
         {costumes.map((costume) => (
-          <div key={costume.id}>
+          <div key={costume.id} className="costume-item">
             <img src={costume.image} alt={costume.name} />
             <h3>{costume.name}</h3>
             <p>Votes: {costume.votes}</p>
@@ -56,5 +64,4 @@ function CostumeContest() {
     </div>
   );
 }
-
 export default CostumeContest;
