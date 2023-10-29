@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ContactUs {
+    background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Merriweather', serif;
+    align-items: center;
+    background-image: url('../images/purple-full-moon.jpg');
+    background-size: 100%;
+}
+
+.Main {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    width: 1000px;
+    background-color: rgba(68, 0, 78, 0.8); 
+    border-radius: 25px;
+    color:orange;
+}
+.Bar {
+    width: 100%;
+    height: 10px;
+    background-color: rgba(0,0,0,.7);
+}
+.Grid {
+    flex-direction: column;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: rgba(255,255,255,0); 
+    align-self: center;
+    align-items: center;
+}
+.GridItem {
+    margin: 15px;
+    height: 250px;
+    width: 470px;
+    background-color: rgba(0,0,0,.7);
+    border-radius: 25px;
+}
+.Desc {
+    margin-top: 5px;
+    margin-left: 5px;
+}
+h3 {
+    margin-top: 5px;
+}
+a {
+    color:orangered;
+}
+a:visited {
+    color: orange;
+}
+.Portrait {
+    width: 350;
+    height: 100%;
+    border-radius: 25px;
+    float: right;
+}
+/* Style inputs with type="text", select elements and textareas */
+input[type=text], select, textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Some padding */ 
+    border: 1px solid #717171da; /* Gray border */
+    background-color: #ffffffda;
+    border-radius: 4px; /* Rounded borders */
+    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    margin-top: 6px; /* Add a top margin */
+    margin-bottom: 16px; /* Bottom margin */
+    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+  }
+  
+  /* Style the submit button with a specific background color etc */
+  input[type=submit] {
+    background-color: #04aa6dda;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* When moving the mouse over the submit button, add a darker green color */
+  input[type=submit]:hover {
+    background-color: #45a049d6;
+  }
+  
+  /* Add a background color and some padding around the form */
+  .container {
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0); 
+    padding: 20px;
+  }
+  .ta {
+    height: 200px;
+  }
+  .ContactUsLogo {
+    width: 45%;
+    height: 70px;
+  }
+  @media (max-width: 768px) {
+    .Main {
+        width: 100%;
+    }
+    .GridItem {
+        width: 95%;
+    }
+  }

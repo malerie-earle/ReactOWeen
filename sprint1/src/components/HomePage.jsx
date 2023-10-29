@@ -17,13 +17,15 @@ const HomePage = () => {
           </div>
         </Link>
         <Link to="/costumeContest">
-        <div className="icon">
-          <span>Costume Contest</span>
-        </div>
+          <div className="icon">
+            <span>Costume Contest</span>
+          </div>
         </Link>
-        <div className="icon">
-          <span>Contact Us</span>
-        </div>
+        <Link to="/contactUs">
+          <div className="icon">
+            <span>Contact Us</span>
+          </div>
+        </Link>
       </div>
       <div className="flex-figure">
         <figure>
