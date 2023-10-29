@@ -1,30 +1,18 @@
-import "../styles/CostumeContest.css";
 import React, { useState } from "react";
 import "../styles/CostumeContest.css";
-import banner from "../images/sprint1/src/images/15.png";
+import banner from './banner'; // Import the correct image source
 
 const imagePaths = [
   { name: "img1", path: require("../images/1.jpg") },
   { name: "img2", path: require("../images/2.jpg") },
-  { name: "img3", path: require("../images/3.jpg") },
-  { name: "img4", path: require("../images/4.jpg") },
-  { name: "img5", path: require("../images/5.jpg") },
-  { name: "img6", path: require("../images/6.jpg") },
-  { name: "img7", path: require("../images/7.jpg") },
-  { name: "img8", path: require("../images/8.jpg") },
-  { name: "img9", path: require("../images/9.jpg") },
-  { name: "img10", path: require("../images/10.jpg") },
-  { name: "img11", path: require("../images/11.jpg") },
-  { name: "img12", path: require("../images/12.png") },
-  { name: "img13", path: require("../images/13.jpg") },
-  { name: "img14", path: require("../images/14.jpg") },
+  // Add other image paths here
 ];
 
 const costumeData = imagePaths.map((imageInfo, index) => ({
   name: "Costume " + (index + 1),
   votes: 0,
   id: index + 1,
-  image: imageInfo.path,
+  image: imageInfo.path, // Add the image path
 }));
 
 function CostumeContest() {
@@ -46,7 +34,7 @@ function CostumeContest() {
     <div className="costumeContest">
       <div className="banner">
         <img
-          src={banner}
+          src={banner} // Correct the src attribute
           alt="Costume Contest"
           style={{ width: "90%" }}
         />
@@ -64,4 +52,5 @@ function CostumeContest() {
     </div>
   );
 }
+
 export default CostumeContest;
