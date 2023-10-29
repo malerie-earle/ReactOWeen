@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "../styles/CostumeContest.css";
-import banner from './banner'; // Import the correct image source
+import banner from "ImageComponents/banner.png";
+
 
 const imagePaths = [
   { name: "img1", path: require("../images/1.jpg") },
