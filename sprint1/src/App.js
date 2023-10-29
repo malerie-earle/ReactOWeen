@@ -2,6 +2,7 @@ import "./App.css";
 import HomePage from "./components/HomePage";
 import SnakeGame from "./components/SnakeGame";
 import CostumeContest from "./components/CostumeContest";
+import ContactUs from "./components/ContactUs";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import ImageComponent from "./components/banner";
 
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" element={<HomePage />} />
           <Route path="/snakeGame" element={<SnakeGame />} />
           <Route path="/costumeContest" element={<div><ImageComponent /><CostumeContest /></div>} />
+          <Route path="/contactUs" element={<ContactUs />} />
         </Routes>
       </BrowserRouter>
     </div>
