@@ -3,20 +3,90 @@ import "../styles/CostumeContest.css";
 import banner from '../images/15.png'; 
 
 const imagePaths = [
-  { name: "img1", path: require("../images/1.jpg") },
-  { name: "img2", path: require("../images/2.jpg") },
-  { name: 'img3', path: require('../images/3.jpg') },
-  { name: 'img4', path: require('../images/4.jpg') },
-  { name: 'img5', path: require('../images/5.jpg') },
-  { name: 'img6', path: require('../images/6.jpg') },
-  { name: 'img7', path: require('../images/7.jpg') },
-  { name: 'img8', path: require('../images/8.jpg') },
-  { name: 'img9', path: require('../images/9.jpg') },
-  { name: 'img10', path: require('../images/10.jpg') },
-  { name: 'img11', path: require('../images/11.jpg') },
-  { name: 'img12', path: require('../images/12.png') },
-  { name: 'img13', path: require('../images/13.jpg') },
-  { name: 'img14', path: require('../images/14.jpg') },
+  { 
+    name: "Red Riding Hood", 
+    className: "portrait",
+    // className: "img1",  
+    path: require("../images/1.jpg") 
+  },
+  { 
+    name: "Ghoul & Banshee", 
+    className: "landscape",
+    // className: "img2", 
+    path: require("../images/2.jpg") 
+  },
+  {
+    name: "Zombie Student", 
+    className: "landscape",
+    // className: 'img3', 
+    path: require('../images/3.jpg') 
+  },
+  {
+    name:"Zombie Hockey Player", 
+    className: "portrait",
+    // className: 'img4', 
+    path: require('../images/4.jpg') 
+  },
+  {
+    name:"1920s Gangster", 
+    className: "portrait",
+    // className: 'img5', 
+    path: require('../images/5.jpg') 
+  },
+  {
+    name:"Mrs. Clown", 
+    className: "portrait",
+    // className: 'img6', 
+    path: require('../images/6.jpg') 
+  },
+  {
+    name: "Lemon Wedge", 
+    className: "landscape",
+    // className: 'img7', 
+    path: require('../images/7.jpg') 
+  },
+  {
+    name:"Mr. Clown", 
+    className: "portrait",
+    // className:'img8', 
+    path: require('../images/8.jpg') 
+  },
+  {
+    name:"Cruella De Vil & 2 Dalmations", 
+    className: "portrait",
+    // className: 'img9', 
+    path: require('../images/9.jpg') 
+  },
+  {
+    name: "Mean One 'The Grinch'", 
+    className: "portrait",
+    // className: 'img10', 
+    path: require('../images/10.jpg') 
+  },
+  {
+    name:"Dead Seaman Capt. L. K. Holick", 
+    className: "portrait",
+    // className: 'img11', 
+    path: require('../images/11.jpg') 
+  },
+  {
+    name:"Voodoo Witch & Voodoo Doll", 
+    className: "portrait",
+    // className: 'img12', 
+    path: require('../images/12.png') 
+  },
+  {
+    name:"The Newly-Deads", 
+    className: "portrait",
+    // className: 'img13', 
+    path: require('../images/13.jpg') 
+  },
+  {
+    name:"Black Cat(s)", 
+    className: "portrait",
+    // className: 'img14', 
+    path: require('../images/14.jpg') 
+  },
 ];
 
 const costumeData = imagePaths.map((imageInfo, index) => ({

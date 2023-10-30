@@ -11,7 +11,6 @@
   background-size:contain;
   background-repeat:none;
   background-position:center;
-  
   color: orange;
   font-size: 60pt;
   display: flex;
@@ -31,18 +30,25 @@
 }
 
 .banner1 {
-  height: 200px;
   margin-left:auto;
   margin-right:auto;
   display: flex;
   width: 60%;
+  height: auto;
+}
+.costume-item {
+  display: flex;
+  align-items: center; /* Vertically center items */
+  margin: 10px; /* Adjust the margin as needed */
 }
 
 .costumePic {
+  border-radius: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 40%;
+  width: 50%;
   height: 70%;
   border-radius: 50%;
   float: left;
@@ -51,17 +57,18 @@
 
 h3 {
   font-size: 20pt;
+  position: relative;
+  left: 10px;
+  font-size: 20pt; 
 }
-
 p {
   font-size: 15pt;
 }
 
 .info {
   display:inline;
-  /* flex-direction: column; */
   margin: 0;
   float:left;
-  /* margin-top: 4%; */
-  /* margin-left: -2%; */
-}
+
+};
+
