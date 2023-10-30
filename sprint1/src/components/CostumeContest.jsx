@@ -131,7 +131,7 @@ function CostumeContest() {
           <div className = "info">
             <h3>{costume.name}</h3>
             <p>Votes: {costume.votes}</p>
-            <button onClick={() => handleVote(costume.id)}>Vote</button>
+            <button className="myButton" onClick={() => handleVote(costume.id)}>Vote</button>
           </div></div>
         ))}
       </div>

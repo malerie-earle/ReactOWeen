@@ -7,7 +7,7 @@
 }
 .costumeContest {
   background-color: #272829;
-  background-image: url("../images/webBackground.jpg");
+  background-image: url("../images/webBackground.jpg;");
   background-size:contain;
   background-repeat:none;
   background-position:center;
@@ -72,3 +72,27 @@ p {
 
 };
 
+.myButton {
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:linear-gradient(to bottom, #ffb254 5%, #f5793f 100%);
+	background-color:#ffb254;
+	border-radius:6px;
+	border:2px solid #030303;
+	display:inline-block;
+	cursor:pointer;
+	color:#000000;
+	font-family:Courier New;
+	font-size:21px;
+	font-weight:bold;
+	padding:8px 28px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #f5793f 5%, #ffb254 100%);
+	background-color:#f5793f;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
