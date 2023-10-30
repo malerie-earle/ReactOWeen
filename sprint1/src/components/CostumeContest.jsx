@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/CostumeContest.css";
-import banner from '../images/15.png'; // Import the correct image source
+import banner from '../images/15.png'; 
 
 const imagePaths = [
   { name: "img1", path: require("../images/1.jpg") },
@@ -20,10 +20,10 @@ const imagePaths = [
 ];
 
 const costumeData = imagePaths.map((imageInfo, index) => ({
-  name: "Costume " + (index + 1),
+  name: imageInfo.name,
   votes: 0,
   id: index + 1,
-  image: imageInfo.path, // Add the image path
+  image: imageInfo.path, 
 }));
 
 function CostumeContest() {
@@ -45,19 +45,24 @@ function CostumeContest() {
     <div className="costumeContest">
       <div className="banner">
          { <img
-          src={banner} // Correct the src attribute
+          src={banner} 
           alt="Costume Contest"
-          style={{ width: "90%" }}
+          className="banner1"
         /> }
        </div> 
       <div className="costume">
         {costumes.map((costume) => (
           <div key={costume.id} className="costume-item">
-            <img src={costume.image} alt={costume.name} />
+            <img 
+            src={costume.image} 
+            alt={costume.name} 
+            className= "costumePic" />
+
+          <div className = "info">
             <h3>{costume.name}</h3>
             <p>Votes: {costume.votes}</p>
             <button onClick={() => handleVote(costume.id)}>Vote</button>
-          </div>
+          </div></div>
         ))}
       </div>
     </div>
