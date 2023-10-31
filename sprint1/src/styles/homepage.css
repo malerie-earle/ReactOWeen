@@ -13,14 +13,17 @@
     min-height: 100vh;
     background-color: #000000;
     justify-content: space-around;
+    background-image: url("../images/9427456_4164970.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:scroll;
 }
 
 .main-section {
     display: flex;
     font-family: 'Merriweather', serif;
     flex-wrap: nowrap;
-    background-color: #000000;
-    justify-content: space-evenly;
+    justify-content: space-between;
     
 }
 
@@ -42,13 +45,9 @@ main {
 }
 
 .flex-banner img {
-    width: 55%;
-    height: 200px;
-    margin-top:2%;
-}
-
-.logo {
-    width: 50%;
+    width: 45%;
+    height: 80%;
+    
 }
 
 figcaption a{
@@ -74,14 +73,12 @@ figcaption a{
 }
 
 .flex-figure img {
-    width: 65%;
-    max-height: 90%;
-    margin-top: -19%;
+    width: 95vw;
+    height:auto;
+    margin-top: -21%;
 }
 
 .icon {
-    width: 200px;
-    height: 200px;
     background-image: url(./../images/Pump.gif);
     background-size: cover; 
     background-repeat: no-repeat; 
@@ -99,7 +96,10 @@ figcaption a{
     flex-direction:row;
     justify-content: center;
     position: relative;
-    
+    z-index: 2;
+    flex-grow: 1;
+    width: 30vw;
+    height: 30vh;
   }
 
 
@@ -155,8 +155,8 @@ footer {
 
   @media (max-width: 480px) {
     .icon {
-        width: 60px;
-        height: 60px;
+        width: 80%;
+        height: 80%;
         
     }
 
