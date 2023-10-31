@@ -8,7 +8,7 @@ const imagePaths = [
   name: "Red Riding Hood", 
   className: "portrait",
   // className: "img1",  
-  path: require("../images/1.jpg") 
+  path: require("../images/1.jpg"),
 },
 { 
   name: "Ghoul & Banshee", 

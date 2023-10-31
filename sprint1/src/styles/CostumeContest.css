@@ -7,10 +7,11 @@
 }
 .costumeContest {
   background-color: #272829;
-  background-image: url("../images/webBackground.jpg");
-  background-size: contain;
-  background-repeat: none;
-  background-position: center;
+  background-image: url("../images/traditional-halloween-pumpkin-mockup-wooden-table-with-copy-space.jpg");
+  background-size:cover;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   color: orange;
   font-size: 60pt;
   display: flex;
@@ -19,8 +20,9 @@
   align-content: center;
   text-align: center;
   font-family: "Merriweather", serif;
-  width: 100%;
+  
 }
+
 
 .banner {
   width: 100%;
@@ -40,6 +42,8 @@
   display: flex;
   align-items: center; /* Vertically center items */
   margin: 10px; /* Adjust the margin as needed */
+
+  
 }
 
 .costumePic {
@@ -48,11 +52,10 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  width: 50%;
-  height: 70%;
   border-radius: 50%;
   float: left;
   margin: 2%;
+  
 }
 
 h3 {
@@ -95,3 +98,11 @@ p {
   position: relative;
   top: 1px;
 }
+
+/* .portrait {
+  height: 40%;
+}
+
+.lanscape {
+  width: 40%;
+} */

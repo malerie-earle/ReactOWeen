@@ -21,6 +21,7 @@
     flex-wrap: nowrap;
     background-color: #000000;
     justify-content: space-evenly;
+    
 }
 
 main {
@@ -41,7 +42,7 @@ main {
 }
 
 .flex-banner img {
-    width: 60%;
+    width: 55%;
     height: 200px;
     margin-top:2%;
 }
@@ -73,7 +74,7 @@ figcaption a{
 }
 
 .flex-figure img {
-    width: 70%;
+    width: 65%;
     max-height: 90%;
     margin-top: -19%;
 }
