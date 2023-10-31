@@ -10,75 +10,75 @@ import costumeContest from "./../images/costumeContest.png";
 import aboutUs from "./../images/aboutUs2.png";
 import contactUs from "./../images/contactUs2.png";
 
-
 const HomePage = () => {
   return (
     <>
-    <div className="homePage">
-      <div className="flex-banner">
-        <img src={banner} alt="banner" />
-      </div>
-    
-      <div className="main-section">
-        <div className="flex-icons">
-          <Link to="/snakeGame">
-            <div className="icon">
-              <img 
-              src = {snakeGame} 
-              alt = "Snake Game" 
-              className = "words"
-              />
-            </div>
-          </Link>
+      <div className="homePage">
+        <div className="flex-banner">
+          <img src={banner} alt="banner" />
         </div>
 
-        <div className="flex-icons">
-          <Link to="/costumeContest">
-            <div className="icon">
-            <img 
-              src = {costumeContest} 
-              alt = "Costume Contest" 
-              className = "words"
-              />
-            </div>
-          </Link>
+        <div className="main-section">
+          
+          
+          <div className="flex-icons">
+            <Link to="/aboutUs">
+              <div className="icon">
+              </div>
+              <img
+                  src={aboutUs}
+                  alt="About Us"
+                  className="words"
+                />
+            </Link>
+          </div>
 
-        <div className="flex-figure">
-          <figure>
-            <img className="logo" src={pumpkin} alt="Pumpkin" />
-          </figure>
+          <div className="flex-icons">
+            <Link to="/snakeGame">
+              <div className="icon">
+              </div>
+              <img
+                  src={snakeGame}
+                  alt="Snake Game"
+                  className="words"
+                />
+            </Link>
+          </div>
+
+          <div className="flex-figure">
+            <figure>
+              <img className="logo" src={pumpkin} alt="Pumpkin" />
+            </figure>
+          </div>
+
+          <div className="flex-icons">
+            <Link to="/costumeContest">
+              <div className="icon">
+              </div>
+              <img
+                  src={costumeContest}
+                  alt="Costume Contest"
+                  className="words"
+                />
+            </Link>
+          </div>
+
+          <div className="flex-icons">
+            <Link to="/contactUs">
+              <div className="icon">
+              </div>
+              <img
+                  src={contactUs}
+                  alt="Contact Us"
+                  className="words"
+                />
+            </Link>
+          </div>
         </div>
 
-        <div className="flex-icons">
-          <Link to="/contactUs">
-            <div className="icon">
-            <img 
-              src = {contactUs} 
-              alt = "Contact Us" 
-              className = "words"
-              />
-            </div>
-          </Link>
-        </div>
-      </div>
-
-      <div className="flex-icons">
-          <Link to="/aboutUs">
-            <div className="icon">
-            <img 
-              src = {aboutUs} 
-              alt = "About Us" 
-              className = "words"
-              />
-            </div>
-          </Link>
-        </div>
-      </div>
-      
-      
-      <footer>
-        <img src={footer} alt="footer" className="footer" />
-      </footer>
+        <footer>
+          <img src={footer} alt="footer" className="footer" />
+        </footer>
       </div>
     </>
   );
