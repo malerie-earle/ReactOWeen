@@ -23,8 +23,8 @@
     display: flex;
     font-family: 'Merriweather', serif;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    
+    justify-content: space-evenly;
+    height: 1100px;
 }
 
 main {
@@ -37,9 +37,8 @@ main {
     display: flex;
     justify-content: center;
     overflow: hidden;
-    z-index: 2;
+    z-index: 3;
     position: relative;
-    /* margin-bottom: -15%;*/
     width: 100%;
     flex-direction: row;
 }
@@ -69,13 +68,13 @@ figcaption a{
     text-align: center;
     z-index: 1;
     position: relative;
-    height:min-content;
+    justify-content: center;
 }
 
 .flex-figure img {
-    width: 95vw;
-    height:auto;
+    width: 50vw;
     margin-top: -21%;
+    flex-grow: 5;
 }
 
 .icon {
@@ -89,6 +88,7 @@ figcaption a{
     align-items: center;
     justify-content: center;
     color: white;
+    margin: 3px;
   }
 
 .flex-icons {
@@ -98,37 +98,18 @@ figcaption a{
     position: relative;
     z-index: 2;
     flex-grow: 1;
-    width: 30vw;
-    height: 30vh;
+    margin: 3px;
+    
   }
-
-
-  .icon span {
-    font-size: 0.8em;
-    margin-top: 110px;
-    color: white;
-    text-align: center;
-  }
-
-footer {
-    background: linear-gradient(to top, #98C800 5%, transparent);
-    width: 100%;
-    height: 100px;
-    padding: 20px;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-    transition: all 0.3s ease;
-}
 
 @media(min-width: 1200px) {
     .flex-figure img {
-        max-width: 80%;
+        max-width: 90%;
     }
 
     .icon {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
     }
 
     .icon span {
@@ -144,8 +125,8 @@ footer {
     }
 
     .icon {
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         
     }
     .icon span {
@@ -155,8 +136,8 @@ footer {
 
   @media (max-width: 480px) {
     .icon {
-        width: 80%;
-        height: 80%;
+        width: 100px;
+        height: 100px;
         
     }
 
@@ -164,3 +145,19 @@ footer {
     font-size: 12px;
    }
   }
+
+  .footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    
+  }
+
+  .footer img {
+    margin-top: -80%;
+  }
+
+.words {
+    height: 18pt;
+    float: below;
+}

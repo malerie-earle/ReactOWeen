@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/CostumeContest.css";
 import banner from '../images/15.png'; 
-import axios from 'axios';
+
 
 const imagePaths = [
 { 
@@ -91,30 +91,16 @@ const imagePaths = [
 ];
 
 const costumeData = imagePaths.map((imageInfo, index) => ({
-name: imageInfo.name,
-votes: 0,
-id: index + 1,
-image: imageInfo.path, 
+  name: imageInfo.name,
+  votes: 0,
+  id: index + 1,
+  image: imageInfo.path, 
 }));
 
 function CostumeContest() {
-const [costumes, setCostumes] = useState(costumeData);
+  const [costumes, setCostumes] = useState(costumeData);
 
-// const handleVote = (costumeId) => {
-//   const updatedCostumes = costumes.map((costume) => {
-//     if (costume.id === costumeId) {
-//       return { ...costume, votes: costume.votes + 1 };
-//     } else {
-//       return costume;
-//     }
-//   });
-
-const handleVote = async (costumeId) => {
-  try {
-    // Make a POST request to the server to update the vote count
-    await axios.post(`http://localhost:3000/vote/${costumeId}`);
-
-    // After a successful vote, you should update the local state in your React app
+  const handleVote = (costumeId) => {
     const updatedCostumes = costumes.map((costume) => {
       if (costume.id === costumeId) {
         return { ...costume, votes: costume.votes + 1 };
@@ -122,39 +108,39 @@ const handleVote = async (costumeId) => {
         return costume;
       }
     });
-
+    // Update the state with the updatedCostumes here
     setCostumes(updatedCostumes);
-  } catch (error) {
-    console.error('Error voting:', error);
-  }
-};
-return (
-  <div className="costumeContest">
-    <div className="banner">
-      { <img
-        src={banner} 
-        alt="Costume Contest"
-        className="banner1"
-      /> }
-    </div> 
-    <div className="costume">
-      {costumes.map((costume) => (
-        <div key={costume.id} className="costume-item">
-          <img 
-            src={costume.image} 
-            alt={costume.name} 
-            className= "costumePic" />
+  };
 
-          <div className = "info">
-            <h3>{costume.name}</h3>
-            <p>Votes: {costume.votes}</p>
-            <button className="myButton" onClick={() => handleVote(costume.id)}>Vote</button>
+  return (
+    <div className="costumeContest">
+      <div className="banner">
+        <img
+          src={banner}
+          alt="Costume Contest"
+          className="banner1"
+        />
+      </div>
+      <div className="costume">
+        {costumes.map((costume) => (
+          <div key={costume.id} className="costume-item">
+            <img
+              src={costume.image}
+              alt={costume.name}
+              className="costumePic"
+            />
+            <div className="info">
+              <h3>{costume.name}</h3>
+              <p>Votes: {costume.votes}</p>
+              <button className="myButton" onClick={() => handleVote(costume.id)}>
+                Vote
+              </button>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
-  </div>
-);
+  );
 }
 
 export default CostumeContest;
