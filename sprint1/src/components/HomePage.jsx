@@ -9,11 +9,16 @@ import snakeGame from "./../images/hungryHaunts.png";
 import costumeContest from "./../images/costumeContest.png";
 import aboutUs from "./../images/aboutUs2.png";
 import contactUs from "./../images/contactUs2.png";
+import topPic from "../images/Screenshot_2023-10-31_at_8.31.19_PM-removebg-preview.png";
 
 const HomePage = () => {
+  
   return (
     <>
       <div className="homePage">
+
+      <a href="#Top"></a>
+
         <div className="flex-banner">
           <img src={banner} alt="banner" />
         </div>
@@ -74,10 +79,16 @@ const HomePage = () => {
                 />
             </Link>
           </div>
+        <div className="toTop">
+        <a to ="#Top" className="toTop" title="scroll to top">
+        <img src ={topPic} alt="toTop" className="topPic" />
+        </a></div>
         </div>
 
         <footer>
+        
           <img src={footer} alt="footer" className="footer" />
+          
         </footer>
       </div>
     </>

@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Roboto&display=swap');
-
 * {
     padding: 0;
     margin: 0;
@@ -11,7 +10,7 @@
     display: flex;
     flex-direction:column;
     min-height: 100vh;
-    background-color: #000000;
+    background-color: darkgrey;
     justify-content: space-around;
     background-image: url("../images/9427456_4164970.jpg");
     background-repeat: no-repeat;
@@ -145,10 +144,43 @@ figcaption a{
 
   .footer img {
     margin-top: -80%;
+    z-index: 1;
   }
 
 .words {
     height: 22pt;
     margin: 10px;
     display: block;
+}
+
+.toTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: white;
+    padding: 10px 20px;
+    
+}
+.toTop::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the glow behind the image */
+    background-color: #a1c718cb; /* Change this to the desired glow color */
+    border-radius: 50%; /* Makes it a circle */
+    box-shadow: 0 0 20px 20px #a1c718cb; 
+  }
+
+  .topPic {
+    width: 100px;
+    height: 200px;
+    transition: box-shadow 0.3s; /* Add a smooth transition effect */
+    z-index: -1;
+  }
+
+  .topPic:hover {
+    box-shadow: 0 0 20px rgba(0, 255, 26, 0.7); 
 }
