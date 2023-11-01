@@ -4,49 +4,32 @@ import pumpkin from "./../images/pumpkin-cropped.png";
 import banner from "./../images/banner-reactoween.png";
 import { Link } from "react-router-dom";
 import footer from "./../images/footer.png";
-import home from "./../images/home.png";
 import snakeGame from "./../images/hungryHaunts.png";
 import costumeContest from "./../images/costumeContest.png";
 import aboutUs from "./../images/aboutUs2.png";
 import contactUs from "./../images/contactUs2.png";
-import topPic from "../images/Screenshot_2023-10-31_at_8.31.19_PM-removebg-preview.png";
 
 const HomePage = () => {
-  
   return (
     <>
       <div className="homePage">
-
-      <a href="#Top"></a>
 
         <div className="flex-banner">
           <img src={banner} alt="banner" />
         </div>
 
         <div className="main-section">
-          
-          
           <div className="flex-icons">
             <Link to="/aboutUs">
-              <div className="icon">
-              </div>
-              <img
-                  src={aboutUs}
-                  alt="About Us"
-                  className="words"
-                />
+              <div className="icon"></div>
+              <img src={aboutUs} alt="About Us" className="words" />
             </Link>
           </div>
 
           <div className="flex-icons">
             <Link to="/snakeGame">
-              <div className="icon">
-              </div>
-              <img
-                  src={snakeGame}
-                  alt="Snake Game"
-                  className="words"
-                />
+              <div className="icon"></div>
+              <img src={snakeGame} alt="Snake Game" className="words" />
             </Link>
           </div>
 
@@ -58,37 +41,25 @@ const HomePage = () => {
 
           <div className="flex-icons">
             <Link to="/costumeContest">
-              <div className="icon">
-              </div>
+              <div className="icon"></div>
               <img
-                  src={costumeContest}
-                  alt="Costume Contest"
-                  className="words"
-                />
+                src={costumeContest}
+                alt="Costume Contest"
+                className="words"
+              />
             </Link>
           </div>
 
           <div className="flex-icons">
             <Link to="/contactUs">
-              <div className="icon">
-              </div>
-              <img
-                  src={contactUs}
-                  alt="Contact Us"
-                  className="words"
-                />
+              <div className="icon"></div>
+              <img src={contactUs} alt="Contact Us" className="words" />
             </Link>
           </div>
-        <div className="toTop">
-        <a to ="#Top" className="toTop" title="scroll to top">
-        <img src ={topPic} alt="toTop" className="topPic" />
-        </a></div>
         </div>
 
         <footer>
-        
           <img src={footer} alt="footer" className="footer" />
-          
         </footer>
       </div>
     </>
