@@ -23,10 +23,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    font-family: 'Merriweather', serif;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
-    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 
@@ -69,8 +67,7 @@ figcaption a{
 }
 
 .flex-figure img {
-    width: 50vw;
-    margin-top: -25%;
+    width: 30vw;
     flex-grow: 5;
 }
 
@@ -92,8 +89,9 @@ figcaption a{
 
 .flex-icons {
     display: flex;
-    flex-direction:row;
+    flex-direction:column;
     justify-content: center;
+    align-items: center;
     position: relative;
     z-index: 2;
     flex-grow: 1;
@@ -103,12 +101,16 @@ figcaption a{
 
 @media (max-width: 768px) {
     .icon {
-        width: 40px;
-        height: 40px;
+        width: 80px;
+        height: 80px;
     }
 
     .flex-icons {
         margin: 10px;
+    }
+
+    .logo {
+        width: 100px;
     }
 
 }
@@ -116,8 +118,8 @@ figcaption a{
 @media (min-width: 768px) {
     footer {
       position: relative;
-      bottom: auto;
-      left: auto;
+      bottom: 0;
+      left: 0;
     }
 
     .icon {
