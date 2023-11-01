@@ -32,8 +32,23 @@ function SnakeGame() {
   const [gameOver, setGameOver] = useState(false);
   const [score, setScore] = useState(0);
   const [candyImage, setCandyImage] = useState(null);
+  const [showPlayButton, setShowPlayButton] = useState(true);
+  const [showRetryButton, setShowRetryButton] = useState(false);
 
   useInterval(() => runGame(), delay);
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      e.preventDefault(); // Prevent the default behavior
+      changeDirection(e);
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
 
   useEffect(() => {
     if (canvasRef.current) {
@@ -62,7 +77,6 @@ function SnakeGame() {
     }
   }, [candyImage, Ghost, snake, gameOver]);
 
-  // random candy image
   useEffect(() => {
     const randomCandyImage =
       candyImages[Math.floor(Math.random() * candyImages.length)];
@@ -79,7 +93,6 @@ function SnakeGame() {
     }
   }
 
-  //sound file
   const scoreSound = new Audio("Alright.mp3");
   scoreSound.id = "score-sound";
   scoreSound.volume = 0.03;
@@ -91,18 +104,26 @@ function SnakeGame() {
     setDelay(timeDelay);
     setScore(0);
     setGameOver(false);
+    setShowPlayButton(false);
+    setShowRetryButton(false);
   }
+
+  function retry() {
+    play();
+  }
+
   function GhostAte(newSnake) {
     let coord = Ghost.map(() => Math.floor((Math.random() * canvasX) / scale));
     if (newSnake[0][0] === Ghost[0] && newSnake[0][1] === Ghost[1]) {
       let newGhost = coord;
       setScore(score + 1);
       setGhost(newGhost);
-      scoreSound.play(); // sound when the snake scores
+      scoreSound.play();
       return true;
     }
     return false;
   }
+
   function checkCollision(head) {
     for (let i = 0; i < head.length; i++) {
       if (head[i] < 0 || head[i] * scale >= canvasX) return true;
@@ -112,6 +133,7 @@ function SnakeGame() {
     }
     return false;
   }
+
   function runGame() {
     const newSnake = [...snake];
     const newSnakeHead = [
@@ -123,6 +145,7 @@ function SnakeGame() {
       setDelay(null);
       setGameOver(true);
       handleSetScore();
+      setShowRetryButton(true);
     }
     if (!GhostAte(newSnake)) {
       newSnake.pop();
@@ -136,7 +159,6 @@ function SnakeGame() {
   }
 
   function changeDirection(e) {
-    // eslint-disable-next-line
     switch (e.key) {
       case "ArrowLeft":
         setDirection([-1, 0]);
@@ -155,18 +177,26 @@ function SnakeGame() {
 
   return (
     <div className="snakeGame">
-      <div onKeyDown={(e) => changeDirection(e)}>
+      <div>
         <img src={Monitor} alt="food" width="4000" className="monitor" />
         <canvas
           className="playArea"
           ref={canvasRef}
           width={`${canvasX}px`}
           height={`${canvasY}px`}
+          tabIndex="0"
         />
         {gameOver && <div className="gameOver">Game Over</div>}
-        <button onClick={play} className="playButton">
-          Play
-        </button>
+        {showPlayButton && !gameOver && (
+          <button onClick={play} className="playButton">
+            PLAY
+          </button>
+        )}
+        {showRetryButton && (
+          <button onClick={retry} className="playButton">
+            RETRY
+          </button>
+        )}
         <div className="scoreBox">
           <h2>Score: {score}</h2>
           <h2>High Score: {localStorage.getItem("snakeScore")}</h2>
