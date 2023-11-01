@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../styles/CostumeContest.css";
-import banner from '../images/15.png'; 
+import banner from '../images/15.png';
 import top from "../images/Screenshot_2023-10-31_at_8.31.19_PM-removebg-preview.png";
 
 const imagePaths = [
@@ -94,11 +94,12 @@ const costumeData = imagePaths.map((imageInfo, index) => ({
   name: imageInfo.name,
   votes: 0,
   id: index + 1,
-  image: imageInfo.path, 
+  image: imageInfo.path,
 }));
 
 function CostumeContest() {
   const [costumes, setCostumes] = useState(costumeData);
+  const [totalVotes, setTotalVotes] = useState(0);
 
   const handleVote = (costumeId) => {
     const updatedCostumes = costumes.map((costume) => {
@@ -108,8 +109,12 @@ function CostumeContest() {
         return costume;
       }
     });
+
+    const newTotalVotes = updatedCostumes.reduce((total, costume) => total + costume.votes, 0);
+
     // Update the state with the updatedCostumes here
     setCostumes(updatedCostumes);
+    setTotalVotes(newTotalVotes);
   };
 
   return (
@@ -139,14 +144,11 @@ function CostumeContest() {
           </div>
         ))}
       </div>
-      <div className="toTop">
-        <a href="#top">
-          <img src = {top} alt="toTop" className="toTheTop"
-          />
-        </a>
+      <div className="totalVotes">
+        Total Votes: {totalVotes}
       </div>
     </div>
   );
 }
-
 export default CostumeContest;
+

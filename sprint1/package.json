@@ -20,7 +20,7 @@
   },
   "scripts": {
     "start": "concurrently \"npm run start-server\" \"npm run start-frontend\"",
-    "start-server": "node app.js",
+  
     "start-frontend": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
