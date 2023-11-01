@@ -34,9 +34,7 @@ const HomePage = () => {
           </div>
 
           <div className="flex-figure">
-            <figure>
               <img className="logo" src={pumpkin} alt="Pumpkin" />
-            </figure>
           </div>
 
           <div className="flex-icons">

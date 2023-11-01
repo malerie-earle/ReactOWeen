@@ -21,9 +21,8 @@
 
 .main-section {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -42,31 +41,17 @@
   height: 80%;
 }
 
-figcaption a {
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-}
-
-.figure {
-  display: flex;
-  text-align: center;
-  z-index: 1;
-  position: relative;
-}
 .flex-figure {
-  display: flex;
-  text-align: center;
-  z-index: 1;
-  position: relative;
-  justify-content: center;
+    display: flex;
+    text-align: center;
+    z-index: 1;
+    position: relative;
+    justify-content: center;
 }
 
-.flex-figure img {
-  display: flex;
-  width: 50vw;
-  flex-grow: 5;
-  align-self: flex-end;
+.logo {
+  width: 500px;
+  height: 500px;
 }
 
 .icon {
@@ -103,11 +88,15 @@ figcaption a {
   }
 
   .flex-icons {
-    margin: 58px;
+    margin: 20px;
+    flex-direction: row;
   }
 
   .logo {
-    width: 100px;
+    width: 200px;
+    height: 250px;
+    margin-left: 150px;
+    margin-right: 50px;
   }
 }
 
@@ -116,11 +105,6 @@ figcaption a {
     position: relative;
     bottom: auto;
     left: auto;
-  }
-
-  .icon {
-    width: 100px;
-    height: 100px;
   }
 }
 
