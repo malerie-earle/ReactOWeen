@@ -9,6 +9,7 @@ import costumeContest from "./../images/costumeContest.png";
 import aboutUs from "./../images/aboutUs2.png";
 import contactUs from "./../images/contactUs2.png";
 
+
 const HomePage = () => {
   return (
     <>
