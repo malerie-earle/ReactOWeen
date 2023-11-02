@@ -8,6 +8,9 @@ import candy1 from "./../images/candy1.png";
 import candy2 from "./../images/candy2.png";
 import candy3 from "./../images/candy3.png";
 import candy4 from "./../images/candy4.png";
+import iconGhost from "./../images/icon-ghost.gif";
+import iconPump from "./../images/icon-pump.gif";
+import iconTitle from "./../images/icon-title.png";
 
 const canvasX = 1000;
 const canvasY = 1000;
@@ -34,8 +37,13 @@ function SnakeGame() {
   const [candyImage, setCandyImage] = useState(null);
   const [showPlayButton, setShowPlayButton] = useState(true);
   const [showRetryButton, setShowRetryButton] = useState(false);
+  const [candyLoaded, setCandyLoaded] = useState(false); // Track candy image loading
 
-  useInterval(() => runGame(), delay);
+  useInterval(() => {
+    if (candyLoaded) {
+      runGame();
+    }
+  }, delay);
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -78,17 +86,19 @@ function SnakeGame() {
   }, [candyImage, Ghost, snake, gameOver]);
 
   useEffect(() => {
+    // Preload the candy image
     const randomCandyImage =
       candyImages[Math.floor(Math.random() * candyImages.length)];
     const image = new Image();
     image.src = randomCandyImage;
     image.onload = () => {
       setCandyImage(image);
+      setCandyLoaded(true); // Mark candy image as loaded
     };
   }, [Ghost, gameOver]);
 
   function handleSetScore() {
-    if (score > Number(localStorage.getItem("snakeScore"))) {
+    if (score > Number(localStorage.getItem("snakeScore") || 0)) {
       localStorage.setItem("snakeScore", JSON.stringify(score));
     }
   }
@@ -106,6 +116,18 @@ function SnakeGame() {
     setGameOver(false);
     setShowPlayButton(false);
     setShowRetryButton(false);
+    setCandyLoaded(false); // Reset the candyLoaded state
+    setCandyImage(null); // Hide the candy image when starting a new game
+
+    // Preload the candy image when starting a new game
+    const randomCandyImage =
+      candyImages[Math.floor(Math.random() * candyImages.length)];
+    const image = new Image();
+    image.src = randomCandyImage;
+    image.onload = () => {
+      setCandyImage(image);
+      setCandyLoaded(true); // Mark candy image as loaded
+    };
   }
 
   function retry() {
@@ -199,8 +221,19 @@ function SnakeGame() {
         )}
         <div className="scoreBox">
           <h2>Score: {score}</h2>
-          <h2>High Score: {localStorage.getItem("snakeScore")}</h2>
+          <h2>High Score: {localStorage.getItem("snakeScore") || 0}</h2>
         </div>
+
+        {/* Add the icons with their respective styles */}
+        {showPlayButton && (
+          <div className="iconContainer">
+            <img src={iconTitle} alt="title" className="iconTitle" />
+            <div className="iconRow">
+              <img src={iconGhost} alt="ghost" className="iconGhost" />
+              <img src={iconPump} alt="pump" className="iconPump" />
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
