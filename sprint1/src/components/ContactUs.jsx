@@ -6,6 +6,7 @@ import AboutUsLogo from "./../images/AboutUs.png"
 import malerie from "./../images/Screenshot 2023-07-27 at 12.39.58 PM.png";
 import justin from "./../images/20231031_155043.jpg";
 import ryan from "./../images/Snapchat-238488373.jpg";
+import chris from "./../images/chris.png";
 
 
 function ContactUs() {
@@ -57,7 +58,7 @@ function ContactUs() {
             <p className="Desc">Malerie is the 'Chuck Norris' of website development.</p>
           </div>
           <div className="GridItem">
-            <img src={Picture} alt="Chris 'The Chris' Chris" className="Portrait"></img>
+            <img src={chris} alt="Chris 'The Chris' Chris" className="Portrait"></img>
             <center>
               <h3>Chris</h3>
             </center>
