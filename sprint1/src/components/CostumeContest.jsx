@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/CostumeContest.css";
 import banner from '../images/15.png';
-import top from "../images/Screenshot_2023-10-31_at_8.31.19_PM-removebg-preview.png";
+
 
 const imagePaths = [
 { 

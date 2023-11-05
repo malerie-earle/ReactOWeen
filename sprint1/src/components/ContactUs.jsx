@@ -1,6 +1,5 @@
 import React from "react";
 import "./../styles/ContactUs.css";
-import Picture from "./../images/12.png"
 import ContactUsLogo from "./../images/ContactUs.png"
 import AboutUsLogo from "./../images/AboutUs.png"
 import malerie from "./../images/Screenshot 2023-07-27 at 12.39.58 PM.png";
