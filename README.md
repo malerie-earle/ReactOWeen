@@ -4,6 +4,7 @@ Website created for software development program assignment. <br />
 Teacher Feedback: <br />
 "9.6/10. A very good project. Keep it up."
 <br />
+<br />
 Assignment Instructions:<br />
 The basic requirements for the Sprint are as follows:<br />
 · The website must have at least 3 separate pages/components including App.js if you’re using react, or including index.html if you’re using HTML, CSS, and JavaScript. If you’re using React, since we have not directly covered linking between react pages/components, you can call other two components on the App.js (obviously there are better ways to do that – but right now taking into consideration the level of discussion we’ve had so far)<br />
