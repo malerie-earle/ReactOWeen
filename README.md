@@ -2,7 +2,7 @@
 Website created for software development program assignment. <br />
 <br />
 Teacher Feedback: <br />
-"9.6/10. A very good project. Keep it up."
+"9.6/10. A very good project. Keep it up." - Noman Atique
 <br />
 <br />
 Assignment Instructions:<br />
