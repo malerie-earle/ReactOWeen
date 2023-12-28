@@ -1,6 +1,12 @@
 <h1>React-O-Ween</h1>
 Website created for software development program assignment. <br />
 <br />
+Group Project:
+Malerie Earle - Costume Contest, Home Page, Styling
+Ryan Guinchard - Home Page, Styling, Router/Links
+Justin Whelan - Hungry Haunt Game
+Christopher Cormier - Contact Us 
+<br />
 Teacher Feedback: <br />
 "9.6/10. A very good project. Keep it up." - Noman Atique
 <br />
