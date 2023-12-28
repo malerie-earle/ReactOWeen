@@ -1,6 +1,8 @@
 <h1>React-O-Ween</h1>
 Website created for software development program assignment. <br />
+
 [![Netlify Status](https://api.netlify.com/api/v1/badges/16e105f0-5b84-48a6-9222-6c15f51dc49d/deploy-status)](https://app.netlify.com/sites/react-o-ween/deploys)
+
 <br />
 Group Project:
 Malerie Earle - Costume Contest, Home Page, Styling
