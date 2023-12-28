@@ -194,6 +194,9 @@ function SnakeGame() {
       case "ArrowDown":
         setDirection([0, 1]);
         break;
+      default:
+        // Handle unexpected keys or add a default behavior if needed
+        break;
     }
   }
 

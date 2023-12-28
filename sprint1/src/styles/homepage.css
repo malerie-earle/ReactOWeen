@@ -72,14 +72,35 @@
 
 .flex-icons {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   z-index: 2;
   flex-grow: 1;
-  margin: 3px;
+  margin: 20px;
+  flex-direction: row;;
 }
+
+
+.icon {
+  width: 80px;
+  height: 80px;
+}
+
+.flex-icons {
+  
+}
+
+.logo {
+  width: 200px;
+  height: 250px;
+  margin-left: 150px;
+  margin-right: 50px;
+}
+}
+
+
+
 
 @media (max-width: 768px) {
   .icon {
