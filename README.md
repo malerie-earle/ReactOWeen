@@ -2,6 +2,7 @@
 Website created for software development program assignment. <br />
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/16e105f0-5b84-48a6-9222-6c15f51dc49d/deploy-status)](https://app.netlify.com/sites/react-o-ween/deploys)
+<img width="1422" alt="reactoween" src="https://github.com/malerie-earle/ReactOWeen/assets/141525464/63a29afe-cbc7-4264-a1ca-25b1cac60eab">
 
 <br />
 Group Project:
